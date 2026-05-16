@@ -16,8 +16,7 @@ def main():
     alerta_sistema.enviar("Uso de CPU al 99%")
 
     print("\n--- Prueba 3: Flexibilidad en tiempo de ejecución ---")
-    # El usuario minimiza la app de escritorio y se va. 
-    # Entonces dinámicamente cambia la plataforma a móvil sin destruir la notificación.
+    # El usuario minimiza la app de escritorio y se va. Entonces dinámicamente cambia la plataforma a móvil sin destruir la notificación.
     alerta_sistema.cambiar_plataforma(movil)
     alerta_sistema.enviar("Uso de CPU se mantiene elevado")
 

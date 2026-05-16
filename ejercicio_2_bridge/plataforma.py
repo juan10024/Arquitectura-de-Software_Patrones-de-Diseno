@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 
-# Principio de separación de responsabilidades, 
-# Esta jerarquía solo se preocupa por el medio por el que se presenta
+# Principio de separación de responsabilidades: Esta jerarquía solo se preocupa por el medio por el que se presenta
 class Plataforma(ABC):
     """Interfaz Implementadora."""
     
@@ -9,8 +8,7 @@ class Plataforma(ABC):
     def mostrar(self, titulo: str, contenido: str) -> None:
         pass
 
-# Escalabilidad
-# Crear una nueva clase sin tocar el código de las Notificaciones.
+# Escalabilidad: Crear una nueva clase sin tocar el código de las Notificaciones.
 class PlataformaWeb(Plataforma):
     def mostrar(self, titulo: str, contenido: str) -> None:
         print(f"[WEB UI] {titulo}")

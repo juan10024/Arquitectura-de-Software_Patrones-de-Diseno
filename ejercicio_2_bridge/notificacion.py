@@ -1,16 +1,14 @@
 from abc import ABC, abstractmethod
 from plataforma import Plataforma
 
-# Reducción de clases.
-# No necesitamos clases como NotificacionMensajeWeb o NotificacionAlertaMovil.
+# Reducción de clases: No necesitamos clases como NotificacionMensajeWeb o NotificacionAlertaMovil.
 class Notificacion(ABC):
     """Clase Abstracción Base."""
     
     def __init__(self, plataforma: Plataforma):
         self._plataforma = plataforma  # Referencia al implementador - El Puente
 
-    # Flexibilidad en tiempo de ejecución. 
-    # Permite inyectar una nueva plataforma a un objeto ya instanciado en plena ejecución.
+    # Flexibilidad en tiempo de ejecución: Permite inyectar una nueva plataforma a un objeto ya instanciado en plena ejecución.
     def cambiar_plataforma(self, nueva_plataforma: Plataforma) -> None:
         self._plataforma = nueva_plataforma
 
