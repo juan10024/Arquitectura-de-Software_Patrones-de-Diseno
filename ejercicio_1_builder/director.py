@@ -13,12 +13,12 @@ class DirectorAutomovil:
     def set_constructor(self, constructor: ConstructorAutomovil):
         self._constructor = constructor
 
-    def construir_modelo_basico(self) -> None:
+    def construir_version_basica(self) -> None:
         self._constructor.set_motor("V4 1.6L") \
                          .set_color("Blanco") \
                          .set_llantas("Acero 15 pulgadas")
 
-    def construir_modelo_lujo(self) -> None:
+    def construir_version_full(self) -> None:
         self._constructor.set_motor("V8 5.0L") \
                          .set_color("Negro Mate") \
                          .set_llantas("Aleación 20 pulgadas") \
