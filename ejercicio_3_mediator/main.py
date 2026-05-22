@@ -10,6 +10,11 @@ def main():
     dev2 = UsuarioConcreto(sala_arquitectura, "Bob")
     dev3 = UsuarioConcreto(sala_arquitectura, "Charlie")
 
+    # Registrar explícitamente a los usuarios en el mediador
+    sala_arquitectura.registrar_usuario(dev1)
+    sala_arquitectura.registrar_usuario(dev2)
+    sala_arquitectura.registrar_usuario(dev3)
+
     print("\n--- Inicio de la Conversación ---")
     
     dev1.enviar("Hola equipo, ¿cómo vamos con los diagramas ER de la Etapa 2?")
@@ -18,6 +23,7 @@ def main():
     print("\n--- Modificación Dinámica de la Red ---")
     # Agregar un usuario nuevo.
     qa1 = UsuarioConcreto(sala_arquitectura, "Diana de QC")
+    sala_arquitectura.registrar_usuario(qa1)
     qa1.enviar("Acabo de unirme, por favor compartan los esquemas lógicos.")
 
 if __name__ == "__main__":

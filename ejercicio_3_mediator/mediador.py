@@ -21,7 +21,7 @@ class MediadorChat(ABC):
 class SalaChatMediador(MediadorChat):
     """Implementación concreta del Mediador (La Sala de Chat)."""
     
-    def __init__(self):
+    def __init__(self) -> None:
         self._usuarios: List['Usuario'] = []
 
     # Facilita el mantenimiento: Agregar o eliminar usuarios ocurre solo en esta lista del mediador.

@@ -7,7 +7,7 @@ class DirectorAutomovil:
     Entonces aísla al cliente de los detalles de construcción de versiones comunes  
     """
     
-    def __init__(self, constructor: ConstructorAutomovil):
+    def __init__(self, constructor: ConstructorAutomovil) -> None:
         self._constructor = constructor
 
     def set_constructor(self, constructor: ConstructorAutomovil):

@@ -4,11 +4,9 @@ from mediador import MediadorChat
 class Usuario(ABC):
     """Clase base para los componentes que se comunican."""
     
-    def __init__(self, mediador: MediadorChat, nombre: str):
+    def __init__(self, mediador: MediadorChat, nombre: str) -> None:
         self.mediador = mediador
         self.nombre = nombre
-        # Al crearse, el usuario se auto-registra en el mediador
-        self.mediador.registrar_usuario(self)
 
     @abstractmethod
     def enviar(self, mensaje: str) -> None:

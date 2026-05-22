@@ -5,7 +5,7 @@ from plataforma import Plataforma
 class Notificacion(ABC):
     """Clase Abstracción Base."""
     
-    def __init__(self, plataforma: Plataforma):
+    def __init__(self, plataforma: Plataforma) -> None:
         self._plataforma = plataforma  # Referencia al implementador - El Puente
 
     # Flexibilidad en tiempo de ejecución: Permite inyectar una nueva plataforma a un objeto ya instanciado en plena ejecución.
